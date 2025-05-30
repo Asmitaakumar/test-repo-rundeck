@@ -15,8 +15,7 @@ ENVIRONMENT="Stage"
 KIND="MySQL"
 ALERT_NAME="${RD_JOB_NAME:-Daily MySQL & Elasticsearch Backup}"
 RESOURCE_NAME="pnlp-uat-rds-confidential"
-SLACK_WEBHOOK_URL="https://hooks.slack.com/services/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"
-
+SLACK_WEBHOOK_URL="${SLACK_WEBHOOK_URL:?Error: SLACK_WEBHOOK_URL is not set}"
 start_time=$(date +%s)
 
 #################################################################
