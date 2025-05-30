@@ -15,7 +15,10 @@ ENVIRONMENT="Stage"
 KIND="MySQL"
 ALERT_NAME="${RD_JOB_NAME:-Daily MySQL & Elasticsearch Backup}"
 RESOURCE_NAME="pnlp-uat-rds-confidential"
+
+# The Slack webhook URL is injected by Rundeck from Key Storage (job option or env var)
 SLACK_WEBHOOK_URL="${SLACK_WEBHOOK_URL:?Error: SLACK_WEBHOOK_URL is not set}"
+
 start_time=$(date +%s)
 
 #################################################################
